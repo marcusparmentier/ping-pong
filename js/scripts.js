@@ -5,7 +5,12 @@ var listNums = [];
 var pingPongMaster = function(number) {
   var list = number;
   for(i = 0; i < number; i++){
-    if(number > 0) {
+    // debugger;
+    if (list % 3 === 0) {
+      listNums.push("ping");
+      list = list -1;
+    }
+    else if (list > 0) {
       listNums.push(list);
       list = list - 1;
     }
