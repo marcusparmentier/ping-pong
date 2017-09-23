@@ -6,11 +6,15 @@ var pingPongMaster = function(number) {
   var list = number;
   for(i = 0; i < number; i++){
     // debugger;
-    if (list % 5 === 0 && list !== 0) {
+    if (list % 15 === 0 && list !== 0) {
       listNums.push("pong");
       list = list -1;
     }
-    if (list % 3 === 0 && list !== 0) {
+    else if (list % 5 === 0 && list !== 0) {
+      listNums.push("pong");
+      list = list -1;
+    }
+    else if (list % 3 === 0 && list !== 0) {
       listNums.push("ping");
       list = list -1;
     }
