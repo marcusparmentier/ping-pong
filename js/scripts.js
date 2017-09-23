@@ -22,6 +22,9 @@ var pingPongMaster = function(number) {
       listNums.push(list);
       list = list - 1;
     }
+    else {
+      alert("Please enter a valid number.");
+    }
   };
   return listNums.reverse();
 };
