@@ -32,7 +32,7 @@ Output: 1, 2, ping, 4, pong, ping, 7, 8, ping, pong, 11, ping, 13, 14, ping-pong
 * N/A
 
 ## Known Bugs
-* The result displays in a massive line horizontally.
+* N/A
 
 ## Technologies Used
 * JS
