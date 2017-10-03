@@ -7,7 +7,7 @@ var pingPongMaster = function(number) {
   for(i = 0; i < number; i++){
     // debugger;
     if (list % 15 === 0 && list !== 0) {
-      listNums.push("pong");
+      listNums.push("ping-pong");
       list = list -1;
     }
     else if (list % 5 === 0 && list !== 0) {
@@ -35,9 +35,18 @@ var pingPongMaster = function(number) {
 //********************User Logic****************************
 $(document).ready(function() {
   $("form#formOne").submit(function(event) {
-    event.preventDefault();
     var input = ($("input#input").val());
     var result = pingPongMaster(input);
-    $("#result").text(listNums);
+
+
+    listNums.forEach(function(number) {
+      $("#result").append("<li class='clear'>" + number + "</li>");
+    });
+
+    $("button#clearList").click(function() {
+      $(".clear").remove();
+    });
+
+    event.preventDefault();
   });
 });
